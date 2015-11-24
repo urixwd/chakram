@@ -1,0 +1,22 @@
+{
+  "name": "chakram_slidernet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urixwd/chakram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urixwd/chakram/issues"
+  },
+  "homepage": "https://github.com/urixwd/chakram#readme",
+  "devDependencies": {
+    "chakram": "^1.2.1"
+  }
+}
