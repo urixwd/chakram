@@ -2,6 +2,7 @@ var _ = require('lodash');
 var chakram = require('chakram'),
     expect = chakram.expect;
 var schemas = require('./tests/schemas');
+var validateSlider = require('./tests/validate_slider');
 
 describe("Test slider app", function() {
     this.timeout(10000);
@@ -25,13 +26,18 @@ describe("Test slider app", function() {
         return expect(appResponse).to.have.json('data.sliders', function (_sliders) {
             sliders = _sliders;
             expect(sliders).to.have.length.of.at.least(1);
-            _.each(sliders, function(slider, key){
-                //TODO verify slider here
-                //console.log(slider);
-            });
         });
     });
     it("should obey the general schema", function () {
         return expect(appResponse).to.have.schema(schemas.generalSchema);
+    });
+    it("slider should obey its structure", function () {
+        var bad_sliders = [];
+        _.each(sliders, function(slider, key){
+            if(!validateSlider.validate(slider)){
+                bad_sliders.push(slider);
+            }
+        });
+        expect(bad_sliders).to.have.length.of(0);
     });
 });
