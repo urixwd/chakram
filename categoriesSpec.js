@@ -4,17 +4,19 @@ var chakram = require('chakram'),
 describe("Documentation examples", function() {
     this.timeout(10000);
 
-    it("chakram.wait", function () {
-        var response = chakram.get("http://ecom.slidernet.co/api/categories/all");
-        expect(response).to.have.status(200);
-        expect(response).not.to.have.status(404);
-        return chakram.wait();
+    var catResponse, initialData, categoryName;
+
+    before("Initialize the API call", function () {
+        categoryName = 'all';
+        initialData = {
+        };
+        catResponse = chakram.get('http://ecom.slidernet.co/api/categories/' + categoryName, initialData);
     });
-    it(".then", function () {
-        return chakram.get("http://ecom.slidernet.co/api/categories/all").then(
-            function(response){
-                expect(response).to.have.status(200);
-                expect(response).not.to.have.status(404);
-            });
+
+    it("should return 200 on success", function () {
+        return expect(catResponse).to.have.status(200);
+    });
+    it("should not return 404 on success", function () {
+        return expect(catResponse).not.to.have.status(404);
     });
 });
