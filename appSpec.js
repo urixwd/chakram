@@ -39,5 +39,8 @@ describe("Test slider app", function() {
             }
         });
         expect(bad_sliders).to.have.length.of(0);
+        if(bad_sliders.length){
+            console.log('bad sliders!', bad_sliders);
+        }
     });
 });
