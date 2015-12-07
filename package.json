@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/urixwd/chakram#readme",
   "devDependencies": {
-    "chakram": "^1.2.1"
+    "chakram": "^1.2.1",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.4"
   }
 }
