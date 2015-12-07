@@ -1,0 +1,13 @@
+<testsuites name="Slider API Test">
+<testsuite name="Test slider app" tests="5" failures="0" skipped="0" timestamp="Mon, 07 Dec 2015 08:23:58 GMT" time="3.342">
+<testcase classname="Test slider app" name="should return 200 on success" time="3.306"/>
+<testcase classname="Test slider app" name="should not return 404 on success" time="0.002"/>
+<testcase classname="Test slider app" name="should contain sliders" time="0.002"/>
+<testcase classname="Test slider app" name="should obey the general schema" time="0.004"/>
+<testcase classname="Test slider app" name="slider should obey its structure" time="0.004"/>
+</testsuite>
+<testsuite name="Documentation examples" tests="2" failures="0" skipped="0" timestamp="Mon, 07 Dec 2015 08:24:02 GMT" time="4.837">
+<testcase classname="Documentation examples" name="should return 200 on success" time="4.829"/>
+<testcase classname="Documentation examples" name="should not return 404 on success" time="0.001"/>
+</testsuite>
+</testsuites>

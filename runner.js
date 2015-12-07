@@ -3,7 +3,14 @@ var Mocha = require('mocha'),
     path = require('path');
 
 // Instantiate a Mocha instance.
-var mocha = new Mocha();
+var mocha = new Mocha({
+    "reporter": "mocha-jenkins-reporter",
+    "reporterOptions": {
+        "junit_report_name": "Slider API Test",
+        "junit_report_path": "report.xml",
+        "junit_report_stack": 1
+    }
+});
 
 var testDir = '.';
 
