@@ -19,9 +19,6 @@ describe("Test slider app", function() {
     it("should return 200 on success", function () {
         return expect(appResponse).to.have.status(200);
     });
-    it("should return 101 on success", function () {
-        return expect(appResponse).to.have.status(101);
-    });
     it("should not return 404 on success", function () {
         return expect(appResponse).not.to.have.status(404);
     });
